@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/track_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="70dp"
+        tools:listItem="@layout/track_list_row"/>
+    <android.support.v7.widget.Toolbar
+        android:background="#333333"
+        android:theme="@style/Base.ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignBottom="@id/track_list">
+
+        <ImageView
+            android:id="@+id/selected_track_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            tools:src="@drawable/unnamed"/>
+
+        <TextView
+            android:id="@+id/selected_track_title"
+            android:paddingStart="10dp"
+            android:paddingEnd="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            tools:text="If You Ever Knew (feat. Michael HarPaz)"/>
+
+        <ImageView
+            android:id="@+id/player_control"
+            android:layout_gravity="end"
+            android:layout_width="@dimen/image_size"
+            android:layout_height="@dimen/image_size"
+            android:src="@drawable/ic_play"/>
+
+    </android.support.v7.widget.Toolbar>
+</RelativeLayout>
